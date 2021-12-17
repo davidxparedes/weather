@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="min-h-screen box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 py-6 flex flex-col justify-center px-6 sm:py-12">
+    <div class="container mt-auto">
+      <div class="bg-white/10 text-center text-white w-full sm:w-1/2 lg:w-1/4 mb-4 px-6 pt-10 pb-8 shadow-xl mx-auto rounded-lg relative">
+        <img class="icon opacity-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <p class="flex justify-center relative z-10 leading-10">
+          <span class="temperature font-bold text-8xl"></span>
+          <span>°C</span>
+        </p>
+        <p class="relative z-10"><span class="description"></span> in</p>
+        <p class="location relative z-10 font-bold text-4xl"></p>
+      </div>
+    </div>
+
+    <form class="mt-auto">
+      <div class="flex items-center border-b border-white border-opacity-50 py-2">
+        <label class="sr-only" for="city">Change Location</label>
+        <input id="city" placeholder="Change Location" class="appearance-none bg-transparent w-full border-none text-white mr-3 py-1 px-2 leading-tight focus:outline-none placeholder-white placeholder-opacity-50 focus:placeholder-opacity-10">
+        <button class="bg-transparent hover:bg-white text-white hover:text-black font-semibold py-2 px-4 border border-white hover:border-transparent rounded opacity-50 hover:opacity-100" type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
