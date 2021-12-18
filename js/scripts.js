@@ -1,4 +1,5 @@
 const app = {};
+app.form = document.querySelector('form');
 
 app.getWeather = async (city, country) => {
   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&APPID=7b6fa16cbc0b568bf695198f7168501d`)
@@ -21,7 +22,16 @@ app.displayData = (data) => {
 }
 
 app.init = () => {
-  app.getWeather('Toronto', 'CA' );
+  app.getWeather('Toronto', 'CA');
+
+  app.form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let locationInputValue = document.querySelector('#location').value.split(',');
+
+    app.getWeather.apply(this, locationInputValue);
+    app.form.reset();
+  });
 };
 
 (function(){
