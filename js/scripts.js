@@ -3,7 +3,7 @@ app.form = document.querySelector('form');
 app.errorMsg = document.querySelector('.error-msg');
 
 app.getWeather = async (city, country) => {
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&APPID=7b6fa16cbc0b568bf695198f7168501d`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&APPID=7b6fa16cbc0b568bf695198f7168501d`)
   .then((response) => {
     if (response.ok) {
       return response.json();
