@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="min-h-screen box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 py-6 flex flex-col justify-center px-6 sm:py-12">
@@ -24,7 +23,12 @@
     </div>
 
     <form class="mt-auto">
-      <div class="flex items-center border-b border-white border-opacity-50 py-2">
+      <div class="flex items-center border-b border-white border-opacity-50 relative py-2">
+
+        <span class="error-msg bg-red-600 rounded-xl absolute opacity-0 transition-opacity duration-200 -top-5 overflow-hidden">
+          <p class="px-4 py-1 text-white text-sm">No data for that location</p>
+        </span>
+
         <label class="sr-only" for="location">Change Location</label>
         <input id="location" placeholder="Change Location" class="appearance-none bg-transparent w-full border-none text-white mr-3 py-1 px-2 leading-tight focus:outline-none placeholder-white placeholder-opacity-50 focus:placeholder-opacity-10">
         <button class="bg-transparent hover:bg-white text-white hover:text-black font-semibold py-2 px-4 border border-white hover:border-transparent rounded opacity-50 hover:opacity-100" type="submit">
