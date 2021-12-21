@@ -22,7 +22,7 @@ app.displayData = (data) => {
   document.querySelector('.icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
   document.querySelector('.temperature').innerHTML = Math.trunc(data.main.temp);
   document.querySelector('.description').innerHTML = data.weather[0].description;
-  document.querySelector('.icon').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+  document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
   document.querySelector('.location').innerHTML = data.name;
 }
 
