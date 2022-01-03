@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <title>Weather</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="min-h-screen box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 py-6 flex flex-col justify-center px-6 sm:py-12">
-    <div class="container mt-auto">
-      <div class="bg-white/10 text-center text-white w-full sm:w-1/2 lg:w-1/4 mb-4 px-6 pt-10 pb-8 shadow-xl mx-auto rounded-lg">
+  <div class="min-h-screen bg-gradient-to-r from-indigo-600 to-pink-500 p-6 flex flex-col">
+    <div class="container m-auto">
+      <div class="bg-white/10 text-center text-white w-full sm:w-1/2 lg:w-1/4 mb-10 p-9 shadow-xl mx-auto rounded-lg">
         <div class="relative">
           <img class="icon opacity-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <p class="flex justify-center relative z-10 leading-10">
@@ -17,27 +17,22 @@
             <span>°C</span>
           </p>
         </div>
-        <p class="relative z-10"><span class="description"></span> in</p>
-        <p class="location-city relative z-10 font-bold text-4xl"></p>
-        <p class="location-country small">Canada</p>
+        <p class="description"></p>
+        <p class="city font-bold text-4xl"></p>
+        <p class="country">Canada</p>
       </div>
     </div>
-
-    <form class="mt-auto">
-      <div class="flex items-center border-b border-white border-opacity-50 relative py-2">
-
-        <span class="error-msg bg-red-600 rounded-xl absolute opacity-0 transition-opacity duration-200 -top-5 overflow-hidden">
-          <p class="px-4 py-1 text-white text-sm">No data for that location</p>
+    <form class="mt-auto text-white">
+      <div class="flex border-b relative py-2">
+        <span class="error-msg bg-red-600 rounded-xl absolute opacity-0 transition-opacity -top-8">
+          <p class="px-4 py-1 text-sm">No data for that location</p>
         </span>
-
         <label class="sr-only" for="location">Change Location</label>
-        <input id="location" placeholder="Change Location" class="appearance-none bg-transparent w-full border-none text-white mr-3 py-1 px-2 leading-tight focus:outline-none placeholder-white placeholder-opacity-50 focus:placeholder-opacity-10" required>
-        <button class="bg-transparent hover:bg-white text-white hover:text-black font-semibold py-2 px-4 border border-white hover:border-transparent rounded opacity-50 hover:opacity-100" type="submit">
-          Submit
-        </button>
+        <input id="location" placeholder="Change Location" class="bg-transparent w-full focus:outline-none placeholder-white placeholder-opacity-50 focus:placeholder-opacity-20" required>
+        <button class="hover:bg-white hover:text-black p-2 border border-white rounded" type="submit">Submit</button>
       </div>
+      <p class="opacity-50 mt-2 text-xs">Ex. London, GB / London, CA</p>
     </form>
-    <p class="text-white opacity-50"><small>Ex. London, GB / London, CA</small></p>
   </div>
 
   <script src="js/scripts.js"></script>

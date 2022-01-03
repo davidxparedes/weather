@@ -24,8 +24,8 @@ app.displayData = (data) => {
   document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
   document.querySelector('.temperature').innerHTML = Math.trunc(data.main.temp);
   document.querySelector('.description').innerHTML = data.weather[0].description;
-  document.querySelector('.location-city').innerHTML = data.name;
-  document.querySelector('.location-country').innerHTML = regionNames.of(data.sys.country);
+  document.querySelector('.city').innerHTML = data.name;
+  document.querySelector('.country').innerHTML = regionNames.of(data.sys.country);
 }
 
 app.displayError = () => {
