@@ -1,5 +1,10 @@
 const app = {};
 app.form = document.querySelector('form');
+app.icon = document.querySelector('.icon');
+app.temperature = document.querySelector('.temperature');
+app.description = document.querySelector('.description');
+app.city = document.querySelector('.city');
+app.country = document.querySelector('.country');
 app.errorMsg = document.querySelector('.error-msg');
 
 app.getWeather = async (city, country) => {
@@ -21,11 +26,11 @@ app.getWeather = async (city, country) => {
 app.displayData = (data) => {
   let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
 
-  document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
-  document.querySelector('.temperature').innerHTML = Math.trunc(data.main.temp);
-  document.querySelector('.description').innerHTML = data.weather[0].description;
-  document.querySelector('.city').innerHTML = data.name;
-  document.querySelector('.country').innerHTML = regionNames.of(data.sys.country);
+  app.icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+  app.temperature.innerHTML = Math.trunc(data.main.temp);
+  app.description.innerHTML = data.weather[0].description;
+  app.city.innerHTML = data.name;
+  app.country.innerHTML = regionNames.of(data.sys.country);
 }
 
 app.displayError = () => {
@@ -50,3 +55,4 @@ app.init = () => {
 (function(){
   app.init();
 })();
+
