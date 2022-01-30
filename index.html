@@ -8,17 +8,36 @@
 </head>
 <body class="min-h-screen bg-gradient-to-r from-indigo-600 to-pink-500 p-6 flex flex-col">
   <div class="container m-auto">
-    <div class="bg-white/10 text-center text-white w-full sm:w-1/2 lg:w-1/4 mb-10 p-9 shadow-xl mx-auto rounded-lg">
-      <div class="relative">
-        <img class="icon opacity-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <p class="flex justify-center relative z-10 leading-10">
-          <span class="temperature font-bold text-8xl"></span>
-          <span>°C</span>
-        </p>
+    <div class="bg-white/10 text-white w-full sm:w-1/2 lg:w-1/4 mb-10 shadow-xl mx-auto rounded-lg">
+      <div class="text-center px-9 pt-9 pb-2">
+        <div class="relative">
+          <img class="icon opacity-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <p class="flex justify-center relative z-10 leading-10">
+            <span class="temperature font-bold text-8xl"></span>
+            °C
+          </p>
+        </div>
+        <p class="description"></p>
+        <p class="city font-bold text-4xl"></p>
+        <p class="country">Canada</p>
       </div>
-      <p class="description"></p>
-      <p class="city font-bold text-4xl"></p>
-      <p class="country">Canada</p>
+      <div class="max-w-lg mx-auto">
+        <details class="open:bg-white open:text-black rounded-b-lg">
+          <summary class="pt-2 pb-4 cursor-pointer text-center text-xs">More Info</summary>
+          <div class="px-3 text-sm leading-6 text-slate-600">
+            <dl class="flex flex-wrap text-xs pb-3">
+              <dt class="w-1/2">Feels Like</dt>
+              <dd class="feels-like w-1/2 text-right"></dd>
+              <dt class="w-1/2">Humidity</dt>
+              <dd class="humidity w-1/2 text-right"></dd>
+              <dt class="w-1/2">High</dt>
+              <dd class="high w-1/2 text-right"></dd>
+              <dt class="w-1/2">Low</dt>
+              <dd class="low w-1/2 text-right"></dd>
+            </dl>
+          </div>
+        </details>
+      </div>
     </div>
   </div>
   <form class="mt-auto text-white">

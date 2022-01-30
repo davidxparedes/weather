@@ -5,6 +5,10 @@ app.temperature = document.querySelector('.temperature');
 app.description = document.querySelector('.description');
 app.city = document.querySelector('.city');
 app.country = document.querySelector('.country');
+app.feelsLike = document.querySelector('.feels-like');
+app.humidity = document.querySelector('.humidity');
+app.high = document.querySelector('.high');
+app.low = document.querySelector('.low');
 app.errorMsg = document.querySelector('.error-msg');
 
 app.getWeather = async (city, country) => {
@@ -15,6 +19,7 @@ app.getWeather = async (city, country) => {
     }
   })
   .then((data) => {
+    console.log(data);
     app.displayData(data);
   })
   .catch((error) => {
@@ -31,6 +36,10 @@ app.displayData = (data) => {
   app.description.innerHTML = data.weather[0].description;
   app.city.innerHTML = data.name;
   app.country.innerHTML = regionNames.of(data.sys.country);
+  app.feelsLike.innerHTML = `${Math.trunc(data.main.feels_like)}°C`;
+  app.humidity.innerHTML = `${data.main.humidity}%`;
+  app.high.innerHTML = `${Math.trunc(data.main.temp_max)}°C`;
+  app.low.innerHTML = `${Math.trunc(data.main.temp_min)}°C`;
 }
 
 app.displayError = () => {
