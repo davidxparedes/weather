@@ -6,35 +6,34 @@
   <title>Weather</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-r from-indigo-600 to-pink-500 p-6 flex flex-col">
-  <div class="container m-auto">
-    <div class="bg-white/10 text-white sm:w-1/2 lg:w-1/4 mb-10 shadow-xl mx-auto rounded-lg">
-      <div class="text-center px-9 pt-9 pb-2 relative">
-        <img class="icon opacity-30 absolute -top-3 left-1/2 transform -translate-x-1/2">
-        <p class="flex justify-center relative z-10 leading-10">
-          <span class="temperature font-bold text-8xl"></span>°C
-        </p>
-        <p class="description"></p>
-        <p class="city font-bold text-4xl"></p>
-        <p class="country">Canada</p>
-      </div>
-      <details class="open:bg-white open:text-black rounded-b-lg">
-        <summary class="pt-2 pb-4 cursor-pointer text-center text-xs outline-none">More Info</summary>
-        <div class="px-3 text-sm leading-6 text-slate-600">
-          <dl class="flex flex-wrap text-xs pb-3">
-            <dt class="w-1/2">Feels Like</dt>
-            <dd class="feels-like w-1/2 text-right"></dd>
-            <dt class="w-1/2">Humidity</dt>
-            <dd class="humidity w-1/2 text-right"></dd>
-            <dt class="w-1/2">High</dt>
-            <dd class="high w-1/2 text-right"></dd>
-            <dt class="w-1/2">Low</dt>
-            <dd class="low w-1/2 text-right"></dd>
-          </dl>
-        </div>
-      </details>
+<body class="min-h-screen bg-gradient-to-r from-indigo-600 to-pink-500 p-4 flex flex-col">
+  <div class="bg-white/10 text-white shadow-xl m-auto rounded-lg">
+    <div class="text-center p-12 pb-2 relative">
+      <img class="icon opacity-30 absolute -top-1 left-1/2 transform -translate-x-1/2">
+      <p class="flex justify-center relative z-10 leading-10">
+        <span class="temperature font-bold text-8xl"></span>°C
+      </p>
+      <p class="description"></p>
+      <p class="city font-bold text-4xl"></p>
+      <p class="country">Canada</p>
     </div>
+    <details class="open:bg-white open:text-black rounded-b-lg">
+      <summary class="py-4 cursor-pointer text-center text-xs outline-none">More Info</summary>
+      <div class="px-3 text-sm leading-6 text-slate-600">
+        <dl class="flex flex-wrap text-xs pb-3">
+          <dt class="w-1/2">Feels Like</dt>
+          <dd class="feels-like w-1/2 text-right"></dd>
+          <dt class="w-1/2">Humidity</dt>
+          <dd class="humidity w-1/2 text-right"></dd>
+          <dt class="w-1/2">High</dt>
+          <dd class="high w-1/2 text-right"></dd>
+          <dt class="w-1/2">Low</dt>
+          <dd class="low w-1/2 text-right"></dd>
+        </dl>
+      </div>
+    </details>
   </div>
+
   <form class="mt-auto text-white">
     <div class="flex border-b relative py-2">
       <span class="error-msg bg-red-600 rounded-xl absolute opacity-0 transition-opacity -top-8">
